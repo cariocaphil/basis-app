@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
 
-function App() {
+// Importing remote component dynamically
+const RemoteButton = React.lazy(() => import("remoteApp/Button"));
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Basis App (Host)</h1>
+      <Suspense fallback={<div>Loading Remote Component...</div>}>
+        <RemoteButton />
+      </Suspense>
     </div>
   );
-}
+};
 
 export default App;
