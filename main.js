@@ -151,15 +151,15 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ }),
 
 /***/ "webpack/container/reference/remoteApp":
-/*!***********************************************************************************!*\
-  !*** external "remoteApp@https:/cariocaphil.github.io/remote-app/remoteEntry.js" ***!
-  \***********************************************************************************/
+/*!************************************************************************************!*\
+  !*** external "remoteApp@https://cariocaphil.github.io/remote-app/remoteEntry.js" ***!
+  \************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof remoteApp !== "undefined") return resolve();
-	__webpack_require__.l("https:/cariocaphil.github.io/remote-app/remoteEntry.js", (event) => {
+	__webpack_require__.l("https://cariocaphil.github.io/remote-app/remoteEntry.js", (event) => {
 		if(typeof remoteApp !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
