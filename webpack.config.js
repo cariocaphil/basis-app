@@ -32,7 +32,7 @@ module.exports = {
         remoteApp: "remoteApp@https://cariocaphil.github.io/remote-app/remoteEntry.js",
       },
       shared: {
-        react: { singleton: true, requiredVersion: "^18.0.0", eager: true },
+        react: { singleton: true, requiredVersion: "^18.0.0" },
         "react-dom": { singleton: true, requiredVersion: "^18.0.0" },
       },
     }),
