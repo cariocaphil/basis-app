@@ -29,7 +29,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "basisApp",
       remotes: {
-        remoteApp: "remoteApp@http://localhost:3001/remoteEntry.js",
+        remoteApp: "remoteApp@https://<your-username>.github.io/remote-app/remoteEntry.js",
       },
       shared: {
         react: { singleton: true, requiredVersion: "^18.0.0" },
