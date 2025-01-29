@@ -241,14 +241,14 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	/* webpack/runtime/remotes loading */
 /******/ 	(() => {
 /******/ 		var chunkMapping = {
-/******/ 			"webpack_container_remote_remoteApp_Button": [
-/******/ 				"webpack/container/remote/remoteApp/Button"
+/******/ 			"webpack_container_remote_remoteApp_StockDisplay": [
+/******/ 				"webpack/container/remote/remoteApp/StockDisplay"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
-/******/ 			"webpack/container/remote/remoteApp/Button": [
+/******/ 			"webpack/container/remote/remoteApp/StockDisplay": [
 /******/ 				"default",
-/******/ 				"./Button",
+/******/ 				"./StockDisplay",
 /******/ 				"webpack/container/reference/remoteApp"
 /******/ 			]
 /******/ 		};
