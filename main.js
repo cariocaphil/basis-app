@@ -19,7 +19,7 @@ eval("Promise.all(/*! import() */[__webpack_require__.e(\"webpack_sharing_consum
 
 /***/ }),
 
-/***/ "webpack/container/reference/interestApp":
+/***/ "webpack/container/reference/remoteApp2":
 /*!***************************************************************************************!*\
   !*** external "remoteApp2@https://cariocaphil.github.io/remote-app-2/remoteEntry.js" ***!
   \***************************************************************************************/
@@ -268,8 +268,8 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			"webpack_container_remote_remoteApp_StockDisplay": [
 /******/ 				"webpack/container/remote/remoteApp/StockDisplay"
 /******/ 			],
-/******/ 			"webpack_container_remote_interestApp_InterestCalculator": [
-/******/ 				"webpack/container/remote/interestApp/InterestCalculator"
+/******/ 			"webpack_container_remote_remoteApp2_InterestCalculator": [
+/******/ 				"webpack/container/remote/remoteApp2/InterestCalculator"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
@@ -278,10 +278,10 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 				"./StockDisplay",
 /******/ 				"webpack/container/reference/remoteApp"
 /******/ 			],
-/******/ 			"webpack/container/remote/interestApp/InterestCalculator": [
+/******/ 			"webpack/container/remote/remoteApp2/InterestCalculator": [
 /******/ 				"default",
 /******/ 				"./InterestCalculator",
-/******/ 				"webpack/container/reference/interestApp"
+/******/ 				"webpack/container/reference/remoteApp2"
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.remotes = (chunkId, promises) => {
@@ -373,7 +373,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 					register("react-dom", "18.3.1", () => (Promise.all([__webpack_require__.e("vendors-node_modules_react-dom_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react")]).then(() => (() => (__webpack_require__(/*! ./node_modules/react-dom/index.js */ "./node_modules/react-dom/index.js"))))));
 /******/ 					register("react", "18.3.1", () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! ./node_modules/react/index.js */ "./node_modules/react/index.js"))))));
 /******/ 					initExternal("webpack/container/reference/remoteApp");
-/******/ 					initExternal("webpack/container/reference/interestApp");
+/******/ 					initExternal("webpack/container/reference/remoteApp2");
 /******/ 				}
 /******/ 				break;
 /******/ 			}
