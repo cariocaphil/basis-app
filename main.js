@@ -20,17 +20,17 @@ eval("Promise.all(/*! import() */[__webpack_require__.e(\"webpack_sharing_consum
 /***/ }),
 
 /***/ "webpack/container/reference/interestApp":
-/*!****************************************************************************************!*\
-  !*** external "interestApp@https://cariocaphil.github.io/interest-app/remoteEntry.js" ***!
-  \****************************************************************************************/
+/*!***************************************************************************************!*\
+  !*** external "remoteApp2@https://cariocaphil.github.io/remote-app-2/remoteEntry.js" ***!
+  \***************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
-	if(typeof interestApp !== "undefined") return resolve();
-	__webpack_require__.l("https://cariocaphil.github.io/interest-app/remoteEntry.js", (event) => {
-		if(typeof interestApp !== "undefined") return resolve();
+	if(typeof remoteApp2 !== "undefined") return resolve();
+	__webpack_require__.l("https://cariocaphil.github.io/remote-app-2/remoteEntry.js", (event) => {
+		if(typeof remoteApp2 !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
 		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
@@ -38,8 +38,8 @@ module.exports = new Promise((resolve, reject) => {
 		__webpack_error__.type = errorType;
 		__webpack_error__.request = realSrc;
 		reject(__webpack_error__);
-	}, "interestApp");
-}).then(() => (interestApp));
+	}, "remoteApp2");
+}).then(() => (remoteApp2));
 
 /***/ }),
 
