@@ -19,6 +19,30 @@ eval("Promise.all(/*! import() */[__webpack_require__.e(\"webpack_sharing_consum
 
 /***/ }),
 
+/***/ "webpack/container/reference/interestApp":
+/*!****************************************************************************************!*\
+  !*** external "interestApp@https://cariocaphil.github.io/interest-app/remoteEntry.js" ***!
+  \****************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_error__ = new Error();
+module.exports = new Promise((resolve, reject) => {
+	if(typeof interestApp !== "undefined") return resolve();
+	__webpack_require__.l("https://cariocaphil.github.io/interest-app/remoteEntry.js", (event) => {
+		if(typeof interestApp !== "undefined") return resolve();
+		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+		var realSrc = event && event.target && event.target.src;
+		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
+		__webpack_error__.name = 'ScriptExternalLoadError';
+		__webpack_error__.type = errorType;
+		__webpack_error__.request = realSrc;
+		reject(__webpack_error__);
+	}, "interestApp");
+}).then(() => (interestApp));
+
+/***/ }),
+
 /***/ "webpack/container/reference/remoteApp":
 /*!************************************************************************************!*\
   !*** external "remoteApp@https://cariocaphil.github.io/remote-app/remoteEntry.js" ***!
@@ -243,6 +267,9 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		var chunkMapping = {
 /******/ 			"webpack_container_remote_remoteApp_StockDisplay": [
 /******/ 				"webpack/container/remote/remoteApp/StockDisplay"
+/******/ 			],
+/******/ 			"webpack_container_remote_interestApp_InterestCalculator": [
+/******/ 				"webpack/container/remote/interestApp/InterestCalculator"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
@@ -250,6 +277,11 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 				"default",
 /******/ 				"./StockDisplay",
 /******/ 				"webpack/container/reference/remoteApp"
+/******/ 			],
+/******/ 			"webpack/container/remote/interestApp/InterestCalculator": [
+/******/ 				"default",
+/******/ 				"./InterestCalculator",
+/******/ 				"webpack/container/reference/interestApp"
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.remotes = (chunkId, promises) => {
@@ -341,6 +373,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 					register("react-dom", "18.3.1", () => (Promise.all([__webpack_require__.e("vendors-node_modules_react-dom_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react")]).then(() => (() => (__webpack_require__(/*! ./node_modules/react-dom/index.js */ "./node_modules/react-dom/index.js"))))));
 /******/ 					register("react", "18.3.1", () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! ./node_modules/react/index.js */ "./node_modules/react/index.js"))))));
 /******/ 					initExternal("webpack/container/reference/remoteApp");
+/******/ 					initExternal("webpack/container/reference/interestApp");
 /******/ 				}
 /******/ 				break;
 /******/ 			}
