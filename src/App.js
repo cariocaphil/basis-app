@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 const RemoteStockDisplay = React.lazy(() => import("remoteApp/StockDisplay"));
+const RemoteInterestCalculator = React.lazy(() => import("remoteApp2/InterestCalculator"));
+const RemoteTaxEstimator = React.lazy(() => import("remoteApp2/TaxEstimator"));
+
 
 const App = () => {
   const [stockList, setStockList] = useState([]);
@@ -48,6 +51,12 @@ const App = () => {
           <React.Suspense fallback={<div>Loading Stock Data...</div>}>
             <RemoteStockDisplay stockId={selectedStock} />
           </React.Suspense>
+          <React.Suspense fallback={<div>Loading Interest Calculator...</div>}>
+            <RemoteInterestCalculator />
+          </React.Suspense>
+          <Suspense fallback={<div>Loading Tax Estimator...</div>}>
+            <RemoteTaxEstimator />
+          </Suspense>
         </>
       )}
     </div>
