@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
-import MicroFrontendPage from "./pages/MicroFrontendPage";
 
 const App = () => {
   return (
