@@ -7,6 +7,7 @@ const RemoteTaxEstimator = React.lazy(() => import("remoteApp3/TaxEstimator"));
 const containerStyle = {
   display: "flex",
   justifyContent: "center",
+  alignItems: "flex-start",  // Ensures apps align to the top
   gap: "20px",
   flexWrap: "wrap",
   padding: "20px",
@@ -53,7 +54,7 @@ const App = () => {
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>Financial Dashboard (Basis App)</h1>
-      
+
       {loading && <p style={{ textAlign: "center" }}>Loading available stocks...</p>}
       {error && <p style={{ textAlign: "center", color: "red" }}>Error: {error}</p>}
 
