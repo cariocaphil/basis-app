@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("Promise.all(/*! import() */[__webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"src_bootstrap_js\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ \"./src/bootstrap.js\"));\n\n//# sourceURL=webpack://basis-app/./src/index.js?");
+eval("Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_react-router_dist_development_chunk-IR6S3I6Y_mjs\"), __webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"src_bootstrap_js\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ \"./src/bootstrap.js\"));\n\n//# sourceURL=webpack://basis-app/./src/index.js?");
 
 /***/ }),
 
@@ -628,7 +628,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(/^(vendors\-node_modules_react(|\-dom)_index_js|main|src_bootstrap_js)$/.test(chunkId)) {
+/******/ 						if(/^(vendors\-node_modules_react((|\-dom)_index_|\-router_dist_development_chunk\-IR6S3I6Y_m)js|main|src_bootstrap_js)$/.test(chunkId)) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);
