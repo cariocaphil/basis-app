@@ -43,6 +43,30 @@ module.exports = new Promise((resolve, reject) => {
 
 /***/ }),
 
+/***/ "webpack/container/reference/remoteApp3":
+/*!***************************************************************************************!*\
+  !*** external "remoteApp3@https://cariocaphil.github.io/remote-app-3/remoteEntry.js" ***!
+  \***************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_error__ = new Error();
+module.exports = new Promise((resolve, reject) => {
+	if(typeof remoteApp3 !== "undefined") return resolve();
+	__webpack_require__.l("https://cariocaphil.github.io/remote-app-3/remoteEntry.js", (event) => {
+		if(typeof remoteApp3 !== "undefined") return resolve();
+		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+		var realSrc = event && event.target && event.target.src;
+		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
+		__webpack_error__.name = 'ScriptExternalLoadError';
+		__webpack_error__.type = errorType;
+		__webpack_error__.request = realSrc;
+		reject(__webpack_error__);
+	}, "remoteApp3");
+}).then(() => (remoteApp3));
+
+/***/ }),
+
 /***/ "webpack/container/reference/remoteApp":
 /*!************************************************************************************!*\
   !*** external "remoteApp@https://cariocaphil.github.io/remote-app/remoteEntry.js" ***!
@@ -271,8 +295,8 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			"webpack_container_remote_remoteApp2_InterestCalculator": [
 /******/ 				"webpack/container/remote/remoteApp2/InterestCalculator"
 /******/ 			],
-/******/ 			"webpack_container_remote_remoteApp2_TaxEstimator": [
-/******/ 				"webpack/container/remote/remoteApp2/TaxEstimator"
+/******/ 			"webpack_container_remote_remoteApp3_TaxEstimator": [
+/******/ 				"webpack/container/remote/remoteApp3/TaxEstimator"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
@@ -286,10 +310,10 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 				"./InterestCalculator",
 /******/ 				"webpack/container/reference/remoteApp2"
 /******/ 			],
-/******/ 			"webpack/container/remote/remoteApp2/TaxEstimator": [
+/******/ 			"webpack/container/remote/remoteApp3/TaxEstimator": [
 /******/ 				"default",
 /******/ 				"./TaxEstimator",
-/******/ 				"webpack/container/reference/remoteApp2"
+/******/ 				"webpack/container/reference/remoteApp3"
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.remotes = (chunkId, promises) => {
@@ -382,6 +406,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 					register("react", "18.3.1", () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! ./node_modules/react/index.js */ "./node_modules/react/index.js"))))));
 /******/ 					initExternal("webpack/container/reference/remoteApp");
 /******/ 					initExternal("webpack/container/reference/remoteApp2");
+/******/ 					initExternal("webpack/container/reference/remoteApp3");
 /******/ 				}
 /******/ 				break;
 /******/ 			}
