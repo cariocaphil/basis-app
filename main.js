@@ -270,6 +270,9 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			],
 /******/ 			"webpack_container_remote_remoteApp2_InterestCalculator": [
 /******/ 				"webpack/container/remote/remoteApp2/InterestCalculator"
+/******/ 			],
+/******/ 			"webpack_container_remote_remoteApp2_TaxEstimator": [
+/******/ 				"webpack/container/remote/remoteApp2/TaxEstimator"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
@@ -281,6 +284,11 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			"webpack/container/remote/remoteApp2/InterestCalculator": [
 /******/ 				"default",
 /******/ 				"./InterestCalculator",
+/******/ 				"webpack/container/reference/remoteApp2"
+/******/ 			],
+/******/ 			"webpack/container/remote/remoteApp2/TaxEstimator": [
+/******/ 				"default",
+/******/ 				"./TaxEstimator",
 /******/ 				"webpack/container/reference/remoteApp2"
 /******/ 			]
 /******/ 		};
