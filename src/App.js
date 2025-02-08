@@ -6,9 +6,9 @@ const RemoteTaxEstimator = React.lazy(() => import("remoteApp3/TaxEstimator"));
 
 const containerStyle = {
   display: "flex",
-  justifyContent: "center", // Centered alignment
-  gap: "20px", // Space between tiles
-  flexWrap: "wrap", // Allows wrapping on smaller screens
+  justifyContent: "center",
+  gap: "20px",
+  flexWrap: "wrap",
   padding: "20px",
 };
 
@@ -21,10 +21,10 @@ const tileStyle = {
   maxWidth: "350px",
   textAlign: "center",
   transition: "transform 0.2s ease-in-out",
-};
-
-const tileHoverStyle = {
-  transform: "scale(1.05)",
+  minHeight: "250px", // Ensures each tile retains space while loading
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
 };
 
 const App = () => {
@@ -38,8 +38,8 @@ const App = () => {
       try {
         const response = await fetch("https://api.coingecko.com/api/v3/coins/list");
         const data = await response.json();
-        setStockList(data.slice(0, 10)); // Limit to first 10
-        setSelectedStock(data[0]?.id || "bitcoin"); // Default selection
+        setStockList(data.slice(0, 10));
+        setSelectedStock(data[0]?.id || "bitcoin");
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -75,34 +75,21 @@ const App = () => {
             </select>
           </div>
 
-          {/* Container for tiles */}
           <div style={containerStyle}>
-            <div
-              style={tileStyle}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = tileHoverStyle.transform)}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            >
+            <div style={tileStyle}>
               <Suspense fallback={<div>Loading Stock Data...</div>}>
                 <RemoteStockDisplay stockId={selectedStock} />
               </Suspense>
             </div>
 
-            <div
-              style={tileStyle}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = tileHoverStyle.transform)}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            >
+            <div style={tileStyle}>
               <Suspense fallback={<div>Loading Interest Calculator...</div>}>
                 <RemoteInterestCalculator />
               </Suspense>
             </div>
 
-            <div
-              style={tileStyle}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = tileHoverStyle.transform)}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            >
-              <Suspense fallback={<div>Loading Tax Estimator...</div>}>
+            <div style={tileStyle}>
+              <Suspense fallback={<div>Loading Tax Estimator (this one is slower)...</div>}>
                 <RemoteTaxEstimator />
               </Suspense>
             </div>
