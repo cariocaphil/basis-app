@@ -31,7 +31,7 @@ module.exports = {
       remotes: {
         remoteApp: "remoteApp@https://cariocaphil.github.io/remote-app/remoteEntry.js",
         remoteApp2: "remoteApp2@https://cariocaphil.github.io/remote-app-2/remoteEntry.js",
-        remoteApp3: "remoteApp2@https://cariocaphil.github.io/remote-app-3/remoteEntry.js",
+        remoteApp3: "remoteApp3@https://cariocaphil.github.io/remote-app-3/remoteEntry.js",
       },
       shared: {
         react: { singleton: true, requiredVersion: "^18.0.0" },
